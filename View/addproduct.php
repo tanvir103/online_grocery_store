@@ -6,8 +6,8 @@
     <title>Add Product</title>
 </head>
 <body>
-<center>
-        <font face="times new roman" size="7">Add product</font>
+    <center>
+        <font face="times new roman" size="6">Add product</font>
         <hr width="35%" color="#530f61">
     </center>
 </body>

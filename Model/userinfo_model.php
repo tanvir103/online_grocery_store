@@ -7,6 +7,12 @@ function addCustomer($username,$email,$phone,$password){
     $result=mysqli_query($conn,$sql);
     return $result;
 }
+function addSalesPersonal($username,$email,$phone,$password){
+    $conn=dbConnection();
+    $sql="INSERT INTO userinfo VALUES ('','$password','$email','$username','$phone','Sales Person','Active')";
+    $result=mysqli_query($conn,$sql);
+    return $result;
+}
 
 function login($email,$password){
     $conn=dbConnection();
