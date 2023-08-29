@@ -42,4 +42,22 @@ function viewSalesPerson(){
     $result=mysqli_query($conn,$sql);
     return $result;
 }
+function viewbannedCustomer(){
+    $conn=dbConnection();
+    $sql="select * from Userinfo where Role='Customer' and Status='Inactive'";
+    $result=mysqli_query($conn,$sql);
+    return $result;
+}
+function viewbannedSalesPerson(){
+    $conn=dbConnection();
+    $sql="select * from Userinfo where Role='Sales Person' and Status='Inactive'";
+    $result=mysqli_query($conn,$sql);
+    return $result;
+}
+function banUser($id){
+    $conn=dbConnection();
+    $sql="update Userinfo Status='Inactive' where UserID='$id'";
+    $result=mysqli_query($conn,$sql);
+    return $result;
+}
 ?>
