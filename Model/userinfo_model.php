@@ -29,4 +29,11 @@ function login($email,$password){
     }
    
 }
+
+function viewCustomer(){
+    $conn=dbConnection();
+    $sql="select * from Userinfo where Role='Customer' and Status='Active'";
+    $result=mysqli_query($conn,$sql);
+    return $result;
+}
 ?>
