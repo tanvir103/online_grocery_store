@@ -10,7 +10,7 @@ if(isset($_POST['submit'])){
         header('location:../View/customerDasboard.html');
     }else if($row['Role']=="Admin" && $row['Status']=="Active"){
         header('location:../View/adminDashboard.html');
-    }else if($row['Role']=="Admin" && $row['Status']=="Active"){
+    }else if($row['Role']=="Sales Person" && $row['Status']=="Active"){
         header('location:../View/saleDashboard.html');
     }else{
         header('location:../View/Wrong.html');
