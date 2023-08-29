@@ -6,7 +6,6 @@ if(isset($_POST['submit'])){
 
     $row=login($email,$password);
 
-    
     if($row['Role']=="Customer" && $row['Status']=="Active"){
         header('location:../View/customerDasboard.html');
     }else if($row['Role']=="Admin" && $row['Status']=="Active"){
