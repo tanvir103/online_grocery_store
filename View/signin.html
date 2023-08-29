@@ -7,14 +7,19 @@
 </head>
 <body>
     <center>
-        <font face="Times New Roman" size="5">Login Page</font>
+        <font face="Times New Roman" size="6">Login Page</font>
+        <hr width="40%" color="#530f61">
     </center>
     <form action="../Controller/signin_controller.php" method="post">
-        <table>
-            <tr><td>Email: </td><td><input type="text" name="email"></td></tr>
-            <tr><td>Password:</td><td><input type="password" name="pass"></td></tr>
-            <tr><td><br></td></tr>
-            <tr align="center"><td><input type="submit" name="Submit" value="Login"></td></tr>
+        <table align="center" width="40%" border="0">
+            <br>
+            <tr><td>
+                <font face="Times New Roman">Email: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><input type="text" name="email" size="25px"><br><br>
+                <font face="Times New Roman">Password: </font><input type="password" name="password" size="25px"><br><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button name="submit">Login</button>
+            </td></tr>
         </table>
     </form>
 </body>
