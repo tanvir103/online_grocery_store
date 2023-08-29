@@ -1,9 +1,26 @@
 <?php
 require_once('db_connection.php');
+
 function addCustomer($username,$email,$phone,$password){
     $conn=dbConnection();
     $sql="INSERT INTO userinfo VALUES ('','$password','$email','$username','$phone','Customer','Active')";
     $result=mysqli_query($conn,$sql);
     return $result;
+}
+
+function login($email,$password){
+    $conn=dbConnection();
+    $sql="select * from userinfo where Email='$email' and Password='$password'";
+    $result=mysqli_query($conn,$sql);
+    $count=mysqli_num_rows($result);
+
+    if($count == 1) 
+    {
+    $row = mysqli_fetch_assoc($result);
+    return $row;
+    }else{
+        header('location:../View/Wrong.html');
+    }
+   
 }
 ?>
