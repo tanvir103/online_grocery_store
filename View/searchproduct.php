@@ -9,7 +9,7 @@
 <body>
     <center>
         <font face="times new roman" size="7">Search Product</font>
-        <hr width="35%" color="#530f61">
+        <hr width="40%" color="#530f61">
     </center>
     <table align="center">
         <br>
