@@ -22,7 +22,7 @@ $result=viewSalesPerson();
         <td><font face=\"times new roman\" size=\"5\">Saler's Email</font></td>
         <td><font face=\"times new roman\" size=\"5\">Action</font></td>
         </tr>";
-    }while($row=mysqli_fetch_assoc($result)){
+    while($row=mysqli_fetch_assoc($result)){
         $userid=$row['UserID'];
         $username=$row['Username'];
         $email=$row['Email'];
@@ -33,6 +33,8 @@ $result=viewSalesPerson();
         <td><font face=\"times new roman\" size=\"5\">$email</font></td>
         <td><font face=\"times new roman\" size=\"5\"><a href=\"../Controller/ban-controller.php?id={$userid}\"><button>Ban Sales Person</button></font></a></td>
         </tr>";
+    }}else{
+        echo"<tr><td><font face=\"times new roman\" size=\"5\">No Sales Person Found</font></td></tr>";
     }
     ?>
 </body>

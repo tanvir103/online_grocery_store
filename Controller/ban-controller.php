@@ -1,5 +1,5 @@
 <?php
-require_once('userinfo_model.php');
+require_once('../Model/userinfo_model.php');
     $id=$_GET['id'];
     if(banUser($id)){
         echo "User Banned Successfully";

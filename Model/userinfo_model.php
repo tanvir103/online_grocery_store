@@ -56,7 +56,7 @@ function viewbannedSalesPerson(){
 }
 function banUser($id){
     $conn=dbConnection();
-    $sql="update Userinfo Status='Inactive' where UserID='$id'";
+    $sql="update Userinfo set Status='Inactive' where UserID='$id'";
     $result=mysqli_query($conn,$sql);
     return $result;
 }
