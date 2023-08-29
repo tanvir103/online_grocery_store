@@ -7,6 +7,7 @@ $result=viewSalesPerson();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
     <title>Add Product</title>
 </head>
 <body>
@@ -31,7 +32,7 @@ $result=viewSalesPerson();
         <td><font face=\"times new roman\" size=\"5\">$userid</font></td>
         <td><font face=\"times new roman\" size=\"5\">$username</font></td>
         <td><font face=\"times new roman\" size=\"5\">$email</font></td>
-        <td><font face=\"times new roman\" size=\"5\"><a href=\"../Controller/ban-controller.php?id={$userid}\"><button>Ban Sales Person</button></font></a></td>
+        <td><font face=\"times new roman\" size=\"5\"><a href=\"../Controller/ban-controller.php?id={$userid}\"><button class=\"round-button\">Ban Sales Person</button></font></a></td>
         </tr>";
     }}else{
         echo"<tr><td><font face=\"times new roman\" size=\"5\">No Sales Person Found</font></td></tr>";

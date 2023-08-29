@@ -7,6 +7,7 @@ $result=viewCustomer();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
     <title>Add Product</title>
 </head>
 <body>
@@ -31,7 +32,7 @@ $result=viewCustomer();
         <td><font face=\"times new roman\" size=\"5\">$userid</font></td>
         <td><font face=\"times new roman\" size=\"5\">$username</font></td>
         <td><font face=\"times new roman\" size=\"5\">$email</font></td>
-        <td><font face=\"times new roman\" size=\"5\"><a href=\"../Controller/ban-controller.php?id={$userid}\"><button>Ban Customer</button></font></a></td>
+        <td><font face=\"times new roman\" size=\"5\"><a href=\"../Controller/ban-controller.php?id={$userid}\"><button class=\"round-button\">Ban Customer</button></font></a></td>
         </tr>";
     }
     }else{

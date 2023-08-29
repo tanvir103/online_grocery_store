@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
     <title>Add Product</title>
 </head>
 <body>
@@ -27,7 +28,7 @@
         <td><font face=\"times new roman\" size=\"5\">$userid</font></td>
         <td><font face=\"times new roman\" size=\"5\">$username</font></td>
         <td><font face=\"times new roman\" size=\"5\">$email</font></td>
-        <td><font face=\"times new roman\" size=\"5\"><a href=\"../Controller/recover-controller.php?id={$userid}\"><button>Recover Customer</button></font></a></td>
+        <td><font face=\"times new roman\" size=\"5\"><a href=\"../Controller/recover-controller.php?id={$userid}\"><button class=\"round-button\">Recover Customer</button></font></a></td>
         </tr>";
     }}else{
         echo"<tr><td><font face=\"times new roman\" size=\"5\">No Customer Found For Recover</font></td></tr>";
