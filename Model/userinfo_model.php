@@ -36,4 +36,10 @@ function viewCustomer(){
     $result=mysqli_query($conn,$sql);
     return $result;
 }
+function viewSalesPerson(){
+    $conn=dbConnection();
+    $sql="select * from Userinfo where Role='Sales Person' and Status='Active'";
+    $result=mysqli_query($conn,$sql);
+    return $result;
+}
 ?>
