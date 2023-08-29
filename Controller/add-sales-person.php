@@ -7,7 +7,7 @@ if(isset($_POST['submit'])){
     $password=$_POST['password'];
 
     $result=addSalesPersonal($username,$email,$phone,$password);
-        if($reuslt){
+        if($result){
             echo "Account Created";
         }else{
             echo "Failed";

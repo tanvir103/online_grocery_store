@@ -7,7 +7,7 @@ require_once('../Model/userinfo_model.php');
         $password=$_POST['password'];
 
         $result=addCustomer($username,$email,$phone,$password);
-        if($reuslt){
+        if($result){
             echo "Account Created";
         }else{
             echo "Failed";
