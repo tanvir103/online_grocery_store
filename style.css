@@ -1,0 +1,7 @@
+a{
+    text-decoration: none; 
+    color: rgb(153, 50, 50);
+}
+a:active {
+    background-color: rgb(32, 32, 32);
+} 
