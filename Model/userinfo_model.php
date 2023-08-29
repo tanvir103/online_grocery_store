@@ -60,4 +60,10 @@ function banUser($id){
     $result=mysqli_query($conn,$sql);
     return $result;
 }
+function recoverUser($id){
+    $conn=dbConnection();
+    $sql="update Userinfo set Status='Active' where UserID='$id'";
+    $result=mysqli_query($conn,$sql);
+    return $result;
+}
 ?>
