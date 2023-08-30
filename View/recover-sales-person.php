@@ -12,7 +12,7 @@
         <font face="times new roman" size="7">Recover Sales Person</font>
         <hr width="40%" color="#530f61">
     </center>
-    <table align="center" cellpadding="25" cellspacing="0">
+    <table align="center" cellpadding="15" cellspacing="15">
     <?php
     if(mysqli_num_rows($result)>0){
        echo" <tr><td><font face=\"times new roman\" size=\"5\">Customer ID</font></td>

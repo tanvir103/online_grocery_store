@@ -15,13 +15,13 @@ $result=viewSalesPerson();
         <font face="times new roman" size="7">Block Sales Person</font>
         <hr width="40%" color="#530f61">
     </center>
-    <table align="center" cellpadding="25" cellspacing="0">
+    <table align="center" cellpadding="15" cellspacing="15">
     <?php
     if(mysqli_num_rows($result)>0){
-       echo" <tr><td><font face=\"times new roman\" size=\"5\">Sales ID</font></td>
-        <td><font face=\"times new roman\" size=\"5\">Saler's Name</font></td>
-        <td><font face=\"times new roman\" size=\"5\">Saler's Email</font></td>
-        <td><font face=\"times new roman\" size=\"5\">Action</font></td>
+       echo" <tr><td><font face=\"times new roman\" size=\"5\">Sales ID</font><hr width=\"160px\" color=\"#33c47c\" align=\"left\"></td>
+        <td><font face=\"times new roman\" size=\"5\">Saler's Name</font><hr width=\"160px\" color=\"#33c47c\" align=\"left\"></td>
+        <td><font face=\"times new roman\" size=\"5\">Saler's Email</font><hr width=\"160px\" color=\"#33c47c\" align=\"left\"></td>
+        <td><font face=\"times new roman\" size=\"5\">Action</font><hr width=\"160px\" color=\"#33c47c\" align=\"left\"></td>
         </tr>";
     while($row=mysqli_fetch_assoc($result)){
         $userid=$row['UserID'];
