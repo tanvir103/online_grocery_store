@@ -13,4 +13,8 @@ a{
     text-align: center;
     text-decoration: none;
     cursor: pointer;
-  }
+}
+
+.table td,.table tr{
+    text-align: center;
+}
