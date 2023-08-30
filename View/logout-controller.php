@@ -7,10 +7,12 @@
 </head>
 <body>
     <center>
+    <br><br><br><br><br><br><br><br>
     <img src="../Image/logout.gif" alt="Logout Immage" width="500px" height="400px">
     </center>
 </body>
 </html>
+
 <?php
 setcookie("flag1","",time()-999999,"/");
 setcookie("flag2","",time()-360000,"/");
