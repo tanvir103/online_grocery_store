@@ -23,6 +23,6 @@
         }
         echo" </table>";
     }else{
-        echo "<br><br>No Product Found";
+        echo "<br><br><font face=\"times new roman\" size=\"8\">No Product Found<font>";
     }
 ?>
