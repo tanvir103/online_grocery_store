@@ -31,7 +31,7 @@
             <font face="times new roman" size="4">Product Quantity:</font>
             <input type="number" name="quantity"><br><br>
             <font face="times new roman" size="4">Product Picture:</font>&nbsp;&nbsp;
-            <input type="file" name="picture" accept=".jpg,.png,.gif"><br><br>
+            <input type="file" name="picture" accept=".jpeg,.jpg,.png,.gif"><br><br>
             <button name="submit">Add Product</button>
         </form>
         </td></tr>

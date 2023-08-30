@@ -1,4 +1,5 @@
 <?php
+require_once('../Model/product_model.php');
 if(isset($_POST['submit'])){
     $productname=$_POST['name'];
     $category=$_POST['category'];
