@@ -20,6 +20,7 @@ setcookie("Admin","",time()-9999999999,"/");
 setcookie("Admin","",time()-36000,"/");
 setcookie("Customer","",time()-9999999999,"/");
 setcookie("Customer","",time()-36000,"/");
+session_destroy();
 header("refresh:2;url=../View/signin.html");
 ?>
 
