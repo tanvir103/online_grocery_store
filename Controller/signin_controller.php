@@ -17,24 +17,24 @@ if(isset($_POST['submit'])){
 
     if($row['Role']=="Customer" && $row['Status']=="Active"){
         if($remember=="true"){
-           setcookie("flag1",$row['UserID'],time()+99999,"/"); 
+           setcookie("id",$row['UserID'],time()+99999,"/"); 
         }else{
-            setcookie("flag2",$row['UserID'],time()+3600,"/"); 
+            setcookie("id",$row['UserID'],time()+3600,"/"); 
         }
         header('location:../View/customerDasboard.html');
        
     }else if($row['Role']=="Admin" && $row['Status']=="Active"){
         if($remember=="true"){
-            setcookie("flag1",$row['UserID'],time()+99999,"/"); 
+            setcookie("id",$row['UserID'],time()+99999,"/"); 
          }else{
-             setcookie("flag2",$row['UserID'],time()+3600,"/"); 
+             setcookie("id",$row['UserID'],time()+3600,"/"); 
          }
         header('location:../View/adminDashboard.html');
     }else if($row['Role']=="Sales Person" && $row['Status']=="Active"){
         if($remember=="true"){
-            setcookie("flag1",$row['UserID'],time()+99999,"/"); 
+            setcookie("id",$row['UserID'],time()+99999,"/"); 
          }else{
-             setcookie("flag2",$row['UserID'],time()+3600,"/"); 
+             setcookie("id",$row['UserID'],time()+3600,"/"); 
          }
         header('location:../View/saleDashboard.html');
     }else{

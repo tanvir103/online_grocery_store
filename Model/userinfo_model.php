@@ -66,4 +66,12 @@ function recoverUser($id){
     $result=mysqli_query($conn,$sql);
     return $result;
 }
+
+function viewprofileinfo($id){
+    $conn=dbConnection();
+    $sql="select * from userinfo where UserID='$id'";
+    $result=mysqli_query($conn,$sql);
+    return $result;
+}
+
 ?>
