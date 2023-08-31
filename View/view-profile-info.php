@@ -1,6 +1,16 @@
 <?php
 require_once('../Model/userinfo_model.php');
-$id=$_COOKIE['id'];
+require_once('../Controller/message-controller.php');
+if(isset($_COOKIE['Admin'])){
+    $id=$_COOKIE['Admin'];
+}else if(isset($_COOKIE['Sales'])){
+    $id=$_COOKIE['Sales'];
+}else if(isset($_COOKIE['Customer'])){
+    $id=$_COOKIE['Customer'];
+}else{
+    message("You can't access this page");
+}
+
 $result=viewprofileinfo($id);
 ?>
 <!DOCTYPE html>

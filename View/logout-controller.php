@@ -14,6 +14,7 @@
 </html>
 
 <?php
+session_start();
 setcookie("Sales","",time()-9999999999,"/");
 setcookie("Sales","",time()-36000,"/");
 setcookie("Admin","",time()-9999999999,"/");
