@@ -14,8 +14,12 @@
 </html>
 
 <?php
-setcookie("id","",time()-9999999999,"/");
-setcookie("id","",time()-36000,"/");
+setcookie("Sales","",time()-9999999999,"/");
+setcookie("Sales","",time()-36000,"/");
+setcookie("Admin","",time()-9999999999,"/");
+setcookie("Admin","",time()-36000,"/");
+setcookie("Customer","",time()-9999999999,"/");
+setcookie("Customer","",time()-36000,"/");
 header("refresh:2;url=../View/signin.html");
 ?>
 
