@@ -1,3 +1,9 @@
+<?php
+require_once('../Controller/message-controller.php');
+if(!isset($_COOKIE['Admin'])){
+    message("You can't access this page");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

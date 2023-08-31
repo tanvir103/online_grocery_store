@@ -1,4 +1,10 @@
-<?php require_once('../Model/userinfo_model.php'); $result=viewbannedCustomer();?>
+<?php require_once('../Model/userinfo_model.php');
+require_once('../Controller/message-controller.php');
+if(!isset($_COOKIE['Admin'])){
+    message("You can't access this page");
+}
+$result=viewbannedCustomer();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
