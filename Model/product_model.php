@@ -17,7 +17,7 @@
 
     function viewallproduct(){
         $conn=dbConnection();
-        $sql="SELECT * FROM productinfo ORDER BY ProductName [ASC]";
+        $sql="SELECT * FROM productinfo ORDER BY ProductName ASC";
         $result=mysqli_query($conn,$sql);
         return $result;
     }
