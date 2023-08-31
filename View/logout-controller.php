@@ -14,8 +14,8 @@
 </html>
 
 <?php
-setcookie("flag1","",time()-999999,"/");
-setcookie("flag2","",time()-360000,"/");
+setcookie("id","",time()-999999,"/");
+setcookie("id","",time()-360000,"/");
 header("refresh:2;url=../View/signin.html");
 ?>
 
