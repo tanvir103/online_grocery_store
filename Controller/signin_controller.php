@@ -17,7 +17,7 @@ if(isset($_POST['submit'])){
 
     if($row['Role']=="Customer" && $row['Status']=="Active"){
         if($remember=="true"){
-           setcookie("id",$row['UserID'],time()+99999,"/"); 
+           setcookie("id",$row['UserID'],time()+99999999,"/"); 
         }else{
             setcookie("id",$row['UserID'],time()+3600,"/"); 
         }
@@ -25,14 +25,14 @@ if(isset($_POST['submit'])){
        
     }else if($row['Role']=="Admin" && $row['Status']=="Active"){
         if($remember=="true"){
-            setcookie("id",$row['UserID'],time()+99999,"/"); 
+            setcookie("id",$row['UserID'],time()+99999999,"/"); 
          }else{
              setcookie("id",$row['UserID'],time()+3600,"/"); 
          }
         header('location:../View/adminDashboard.html');
     }else if($row['Role']=="Sales Person" && $row['Status']=="Active"){
         if($remember=="true"){
-            setcookie("id",$row['UserID'],time()+99999,"/"); 
+            setcookie("id",$row['UserID'],time()+99999999,"/"); 
          }else{
              setcookie("id",$row['UserID'],time()+3600,"/"); 
          }
