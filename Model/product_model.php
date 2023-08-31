@@ -14,4 +14,11 @@
         $result=mysqli_query($conn,$sql);
         return $result;
     }
+
+    function viewallproduct(){
+        $conn=dbConnection();
+        $sql="SELECT * FROM productinfo ORDER BY ProductName [ASC]";
+        $result=mysqli_query($conn,$sql);
+        return $result;
+    }
 ?>
