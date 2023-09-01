@@ -25,3 +25,8 @@ function live(str){
         document.getElementById('message').innerHTML=this.responseText;
     }
 }
+function getprice(){
+  let x=document.getElementById("ProductPrice").value;
+  let y=document.getElementById("quantity").value;
+   return document.getElementById("totalprice").innerHTML=x*y;
+}
