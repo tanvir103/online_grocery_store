@@ -20,7 +20,7 @@ else{
     </center>
     <table align="center">
         <br>
-        <tr><td><input type="text" size="40px" id="search" onkeyup="liveSearch(this.value)"></td></tr>
+        <tr><td><input type="text" size="40px" id="search" onkeyup="liveSearch(this.value)" placeholder="Search By Product Name"></td></tr>
         <tr><td><font face="times new roman" id="message" ><br>Please type product name</font></td></tr>
     </table>
 </body>
