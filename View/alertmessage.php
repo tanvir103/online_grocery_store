@@ -17,4 +17,3 @@ $message=$_SESSION['message'];
     </center>
 </body>
 </html>
-<?php header("refresh:2;url=signin.html"); ?>
