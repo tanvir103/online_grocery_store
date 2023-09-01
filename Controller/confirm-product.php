@@ -1,5 +1,5 @@
 <?php
-require_once('../Model/product_model.php'); 
+require_once('../Model/payment_model.php'); 
 if(isset($_POST['submit'])){
     $quantity=$_POST['quantity'];
     $productid=$_POST['productid'];
