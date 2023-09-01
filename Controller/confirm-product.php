@@ -7,8 +7,10 @@ if(isset($_POST['submit'])){
     $id=$_COOKIE['Customer'];
     $productprice=$row['ProductPrice'];
     $totalprice=$quantity*$productprice;
+    $purchaseDate = date("d-m-Y");
+
     $result=addcart($productid,$quantity);
-    $result1=paymentadd($id,$productid,$totalprice);
+    $result1=paymentadd($id,$productid,$totalprice,$purchaseDate);
     if($result && $result1){
         echo "Purchase Confirm & Payment added for approval";
     }else{
