@@ -28,4 +28,12 @@
         return $result;
     }
 
+    function addcart($id,$quantity){
+        $conn=dbConnection();
+        $sql="UPDATE productinfo SET ProductQuantity = ProductQuantity - '$quantity' WHERE ProductID = '$id'";
+        $result=mysqli_query($conn,$sql);
+        return $result;
+    }
+    
+
 ?>

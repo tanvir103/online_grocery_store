@@ -1,8 +1,14 @@
 <?php
+require_once('../Model/product_model.php'); 
 if(isset($_POST['submit'])){
     session_start();
-    $user=$_POST['quantity'];
+    $quantity=$_POST['quantity'];
     $id=$_SESSION['id'];
-    echo $user.", Product ID: ".$id;
+    $result=addcart($id,$quantity);
+    if($result){
+        echo "Purchase Confirm";
+    }else{
+        echo "Failed";
+    }
 }
 ?>
