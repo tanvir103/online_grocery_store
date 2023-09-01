@@ -20,7 +20,7 @@ $result=viewallproduct();
         <font face="times new roman" size="7">Add product to cart</font>
         <hr width="40%" color="#530f61">
         <br><br>
-        <input type="text" size="40px" id="search" onkeyup="live(this.value)">
+        <input type="text" size="40px" id="search" onkeyup="live(this.value)" placeholder="Search By Product Name">
         <br><br>
         <font id="message"></font>
     </center>
