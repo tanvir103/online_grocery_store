@@ -35,5 +35,18 @@
         return $result;
     }
     
+    function productinfo($id){
+        $conn=dbConnection();
+        $sql="SELECT * FROM productinfo WHERE ProductID='$id'";
+        $result=mysqli_query($conn,$sql);
+        $row=mysqli_fetch_assoc($result);
+        return $row;
+    }
 
+    function paymentadd($userid,$productID,$amount){
+        $conn=dbConnection();
+        $sql="INSERT INTO paymentinfo VALUES ('','$userid','$productID','$amount','Inactive')";
+        $result=mysqli_query($conn,$sql);
+        return $result;
+    }
 ?>
