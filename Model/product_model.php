@@ -21,4 +21,11 @@
         $result=mysqli_query($conn,$sql);
         return $result;
     }
+    function search($id){
+        $conn=dbConnection();
+        $sql="SELECT * FROM productinfo WHERE ProductID='$id'";
+        $result=mysqli_query($conn,$sql);
+        return $result;
+    }
+
 ?>

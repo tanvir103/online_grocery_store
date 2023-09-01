@@ -10,7 +10,6 @@ if(isset($_COOKIE['Admin'])){
 }else{
     message("You can't access this page");
 }
-
 $result=viewprofileinfo($id);
 ?>
 <!DOCTYPE html>
