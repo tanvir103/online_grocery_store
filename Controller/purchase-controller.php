@@ -31,19 +31,25 @@ $result=search($id);
             $productquantity=$row['ProductQuantity'];
         }
     }
+    $_SESSION['id']=$id;
     ?>
     <table align="center" width="auto" cellspacing="0" cellpadding="25px" border="1" bordercolor="#91b867">
     <br><br>
+    <form action="confirm-product.php" method="post">
     <tr><td>
-        <font face="times new roman">Username :</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <font face="times new roman"><?php echo $username ?></font><br><br>
-        <font face="times new roman">Phone Number :</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <font face="times new roman"><?php echo $phone ?></font><br><br>
-        <font face="times new roman">Product Name :</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <font face="times new roman"><?php echo $productname ?></font><br><br>
+        <font face="times new roman">Username :</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <font face="times new roman" name="phone" ><?php echo $username ?></font><br><br>
+        <font face="times new roman">Phone Number :</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <font face="times new roman" name="phone" ><?php echo $phone ?></font><br><br>
+        <font face="times new roman">Product Name :</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <font face="times new roman" name="productname"><?php echo $productname ?></font><br><br>
         <font face="times new roman">Available Quantity :</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <font face="times new roman"><?php echo $productquantity ?></font><br><br>
+        <font face="times new roman" name="productquantity"><?php echo $productquantity ?></font><br><br>
+        <font face="times new roman">Purchase Quantity :</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="number" name="quantity"><br><br>
+        <button name="submit">Confirm Purchase</button>
     </td></tr>
+    </form>
     </table>
 </body>
 </html>
