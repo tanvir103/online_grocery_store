@@ -11,16 +11,21 @@ $result=viewallproduct();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../script.js"></script>
     <title>Add Product</title>
 </head>
 <body>
     <center>
         <font face="times new roman" size="7">Add product to cart</font>
         <hr width="40%" color="#530f61">
+        <br><br>
+        <input type="text" size="40px" id="search" onkeyup="live(this.value)">
+        <br><br>
+        <font id="message"></font>
     </center>
     <?php
     if(mysqli_num_rows($result) > 0) {
-        echo"<br><br><table align=\"center\" width=\"60%\" border=\"1\" cellpadding=\"0\" cellspacing=\"0\">
+        echo"<br><br><table align=\"center\" width=\"50%\" border=\"1\" cellpadding=\"0\" cellspacing=\"0\">
         <tr><td align=\"center\"><font face=\"times new roman\" size=\"4\">Product Name</font></td>
             <td align=\"center\"><font face=\"times new roman\" size=\"4\">Product Price</font></td>
             <td align=\"center\"><font face=\"times new roman\" size=\"4\">Product Quantity</font></td>
@@ -33,7 +38,6 @@ $result=viewallproduct();
             $productprice=$row['ProductPrice'];
             $productquantity=$row['ProductQuantity'];
             $picture=$row['ProductPicture'];
-
             echo"
             <tr><td align=\"center\"><font face=\"times new roman\" size=\"4\">$productname</font></td>
             <td align=\"center\"><font face=\"times new roman\" size=\"4\">$productprice</font></td>
