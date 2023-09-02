@@ -30,3 +30,13 @@ function getprice(){
   let y=document.getElementById("quantity").value;
    return document.getElementById("totalprice").innerHTML=x*y;
 }
+
+function checkpassword(){
+    let password=document.getElementById('password').value;
+    let repassword=document.getElementById('repassword').value;
+    if(repassword!=password){
+        document.getElementById("repassworderror").innerHTML="Password Do not match";
+    }else{
+        document.getElementById("repassworderror").innerHTML="";
+    }
+}
