@@ -40,3 +40,19 @@ function checkpassword(){
         document.getElementById("repassworderror").innerHTML="";
     }
 }
+function checkp(){
+    let password=document.getElementById('password').value;
+    if(password.length<8){
+        document.getElementById("passworderror").innerHTML="Password should have more than 8 character";
+    }else{
+        document.getElementById("passworderror").innerHTML="";
+    }
+}
+function checkphone(){
+    let phone=document.getElementById('phone').value;
+    if(phone.length<11){
+        document.getElementById("phoneerror").innerHTML="Phone number should have 11 digit";
+    }else{
+        document.getElementById("phoneerror").innerHTML="";
+    }
+}
