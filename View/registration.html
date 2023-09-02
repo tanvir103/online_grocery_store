@@ -16,10 +16,10 @@
         <table align="center" width="auto" border="1" cellspacing="0" cellpadding="25" align="center" bordercolor="#91b867">
             <br>
             <tr><td><font face="Times New Roman">Customer Username:</font>&nbsp;
-            <input type="text" name="name" size="25px"><br>
+            <input type="text" id="name" name="name" size="25px" onkeyup="checkusername()"><br>
             <font face="times new roman" color="red" id="usernameerror"></font><br>
             <font face="Times New Roman">Customer Email: </font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <input type="text" name="email" size="25px"><br>
+            <input type="text" name="email" id="email" size="25px" onkeyup="checkMail()"><br>
             <font face="times new roman" color="red" id="emailerror"></font><br>
             <font face="Times New Roman">Phone Number: </font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <input type="text" id="phone" name="phone" size="25px" onkeyup="checkphone()"><br>
@@ -31,7 +31,7 @@
             <input type="password" id="repassword" name="repassword" size="25px" onkeyup="checkpassword()"><br>
             <font face="times new roman" color="red" id="repassworderror"></font><br>
             <input type="checkbox" name="termsandconditions" required> <font face="times new roman">I accept the Terms and Conditions</font><br><br>
-            <button name="submit" size="200px">Create Account</button>
+            <button name="submit" id="submit" size="200px">Create Account</button>
             </td></tr>
         </table>
     </form>

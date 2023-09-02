@@ -31,6 +31,42 @@ function getprice(){
    return document.getElementById("totalprice").innerHTML=x*y;
 }
 
+function checkform(){
+        let username = document.getElementById('name').value;
+        let phone = document.getElementById('phone').value;
+        let email = document.getElementById('email').value;
+        let password = document.getElementById('password').value;
+        let repassword = document.getElementById('repassword').value;
+
+        let usernameError = document.getElementById('usernameerror').innerText;
+        let phoneError = document.getElementById('phoneerror').innerText;
+        let mailError = document.getElementById('emailerror').innerText;
+        let passwordError = document.getElementById('passworderror').innerText;
+        let repasswordError = document.getElementById('repassworderror').innerText;
+
+        let submitButton = document.getElementById('submit');
+
+        if (
+            username === '' ||
+            phone === '' ||
+            email === '' ||
+            password === '' ||
+            repassword === '' ||
+            usernameError !== '' ||
+            phoneError !== '' ||
+            mailError !== '' ||
+            passwordError !== '' ||
+            repasswordError !== '' ||
+            password !== repassword
+        ) {
+            submitButton.disabled = true;
+        } else {
+            submitButton.disabled = false;
+        }
+
+    
+}
+
 function checkpassword(){
     let password=document.getElementById('password').value;
     let repassword=document.getElementById('repassword').value;
@@ -39,6 +75,7 @@ function checkpassword(){
     }else{
         document.getElementById("repassworderror").innerHTML="";
     }
+    checkform()
 }
 function checkp(){
     let password=document.getElementById('password').value;
@@ -47,6 +84,7 @@ function checkp(){
     }else{
         document.getElementById("passworderror").innerHTML="";
     }
+    checkform()
 }
 function checkphone(){
     let phone=document.getElementById('phone').value;
@@ -55,4 +93,30 @@ function checkphone(){
     }else{
         document.getElementById("phoneerror").innerHTML="";
     }
+    checkform()
 }
+function checkMail() {
+    let mail = document.getElementById('email').value;
+    let atPos = mail.indexOf('@');
+    let dotPos = mail.lastIndexOf('.');
+
+    if (!mail) {
+        document.getElementById('emailerror').innerHTML = "Email cannot be empty.";
+    } else if (atPos === -1 || atPos === 0 || dotPos === -1 || dotPos <= atPos + 1 || dotPos === mail.length - 1) {
+        document.getElementById('emailerror').innerHTML = "Invalid email address.";
+    } else {
+        document.getElementById('emailerror').innerHTML = "";
+    }
+    checkform()
+}
+
+function checkusername(){
+    let username=document.getElementById('name').value;
+    if(username.length<4){
+        document.getElementById('usernameerror').innerHTML = "Name can't less than 4 character";  
+    }else {
+        document.getElementById('usernameerror').innerHTML = "";
+    }
+    checkform()
+}
+
