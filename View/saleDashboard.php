@@ -18,6 +18,7 @@ if(!isset($_COOKIE['Sales'])){
         <hr width="40%" color="#530f61">
     </center>
     <table align="center" border="1" cellpadding="25" cellspacing="0" width="auto" bordercolor="#91b867">
+        <br>
     <tr><td>
         <font face="times new roman" size="4"><a href="addproduct.php">Add Product</a></font><br><br>
         <font face="times new roman" size="4"><a href="payment-approval.php">Payment Approval</a></font><br><br>
