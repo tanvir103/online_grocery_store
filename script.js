@@ -125,19 +125,15 @@ function checkadd(){
     let productprice=document.getElementById('price').value;
     let productquantity=document.getElementById('quantity').value;
 
-    let nameerror= document.getElementById('nameerror').value;
-    let priceerror= document.getElementById('priceerror').value;
-    let quantityerror= document.getElementById('quantityerror').value;
+    let nameerror= document.getElementById('nameerror').innerText;
+    let priceerror= document.getElementById('priceerror').innerText;
+    let quantityerror= document.getElementById('quantityerror').innerText;
     let submitButton = document.getElementById('submit');
 
     if (
         productname === '' ||
         productprice === '' ||
-        productquantity === '' ||
-        nameerror !== '' ||
-        priceerror !== '' ||
-        quantityerror !== ''
-    ) {
+        productquantity === '' || nameerror !== '' ||priceerror !== '' ||quantityerror !== '') {
         submitButton.disabled = true;
     } else {
         submitButton.disabled = false;
@@ -157,7 +153,7 @@ function productname(){
 }
 function productprice(){
     let productprice=document.getElementById('price').value;
-    if(productname.length==0){
+    if(productprice.length==0){
         document.getElementById('priceerror').innerHTML="Product price should be added";
     }else{
         document.getElementById('priceerror').innerHTML=""; 
