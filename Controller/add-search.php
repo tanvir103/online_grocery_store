@@ -21,7 +21,7 @@ $result=searchProduct($product);
             <td align=\"center\"><font face=\"times new roman\" size=\"4\">$productprice</font></td>
             <td align=\"center\"><font face=\"times new roman\" size=\"4\">$productquantity</font></td>
             <td ><img src=\"$picture\"width=\"250px\"></td>
-            <td align=\"center\"><font face=\"times new roman\" size=\"4\"><a href=\"../Controller/purchase-controller.php?id={$productID}\"><button class=\"round-button\">Purchase Product</button></font></a></td>
+            <td align=\"center\"><font face=\"times new roman\" size=\"4\"><a href=\"../View/purchase-page.php?id={$productID}\"><button class=\"round-button\">Purchase Product</button></font></a></td>
         </tr>";
         }
         echo" </table>";
