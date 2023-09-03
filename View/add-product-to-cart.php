@@ -26,7 +26,7 @@ $result=viewallproduct();
     </center>
     <?php
     if(mysqli_num_rows($result) > 0) {
-        echo"<br><br><table align=\"center\" width=\"50%\" border=\"1\" cellpadding=\"0\" cellspacing=\"0\">
+        echo"<br><br><table align=\"center\" width=\"60%\" border=\"1\" cellpadding=\"0\" cellspacing=\"0\">
         <tr><td align=\"center\"><font face=\"times new roman\" size=\"4\">Product Name</font></td>
             <td align=\"center\"><font face=\"times new roman\" size=\"4\">Product Price</font></td>
             <td align=\"center\"><font face=\"times new roman\" size=\"4\">Product Quantity</font></td>
