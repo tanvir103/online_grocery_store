@@ -120,3 +120,58 @@ function checkusername(){
     checkform()
 }
 
+function checkadd(){
+    let productname=document.getElementById('name').value;
+    let productprice=document.getElementById('price').value;
+    let productquantity=document.getElementById('quantity').value;
+
+    let nameerror= document.getElementById('nameerror').value;
+    let priceerror= document.getElementById('priceerror').value;
+    let quantityerror= document.getElementById('quantityerror').value;
+    let submitButton = document.getElementById('submit');
+
+    if (
+        productname === '' ||
+        productprice === '' ||
+        productquantity === '' ||
+        nameerror !== '' ||
+        priceerror !== '' ||
+        quantityerror !== ''
+    ) {
+        submitButton.disabled = true;
+    } else {
+        submitButton.disabled = false;
+    }
+
+}
+
+function productname(){
+    let productname=document.getElementById('name').value;
+    if(productname.length==0){
+        document.getElementById('nameerror').innerHTML="Product name should be added";
+    }else{
+        document.getElementById('nameerror').innerHTML=""; 
+    }
+    checkadd()
+    
+}
+function productprice(){
+    let productprice=document.getElementById('price').value;
+    if(productname.length==0){
+        document.getElementById('priceerror').innerHTML="Product price should be added";
+    }else{
+        document.getElementById('priceerror').innerHTML=""; 
+    }
+    checkadd()
+}
+
+function productquantity(){
+    let productquantity=document.getElementById('quantity').value;
+    if(productquantity.length==0){
+        document.getElementById('quantityerror').innerHTML="Product quantity should be added";
+    }else{
+        document.getElementById('quantityerror').innerHTML=""; 
+    }
+    checkadd()
+}
+
