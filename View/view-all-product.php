@@ -1,4 +1,5 @@
-<?php require_once('../Model/product_model.php'); $result=viewallproduct(); ?>
+<?php require_once('../Model/product_model.php'); 
+$result=viewallproduct(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

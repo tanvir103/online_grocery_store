@@ -21,6 +21,7 @@ if(!isset($_COOKIE['Admin'])){
         <br>
         <tr><td>
             <font face="times new roman" size="4"><a href="addproduct.php">Add Product</a></font><br><br>
+            <font face="times new roman" size="4"><a href="view-all-product.php">View All Product</a></font><br><br>
             <font face="times new roman" size="4"><a href="view-all-sales.php">View All Sales History</a></font><br><br>
             <font face="times new roman" size="4"><a href="payment-approval.php">Payment Approval</a></font><br><br>
             <font face="times new roman" size="4"><a href="block-customer.php">Block Customer</a></font><br><br>

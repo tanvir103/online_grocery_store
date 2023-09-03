@@ -1,4 +1,7 @@
 <?php require_once('../Model/payment-model.php'); 
+if(!isset($_COOKIE['Customer'])){
+    message("You can't access this page");
+}
 $id=$_COOKIE['Customer'];
 $result=viewpayment($id); 
 ?>
