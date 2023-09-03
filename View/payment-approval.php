@@ -1,4 +1,9 @@
 <?php require_once('../Model/payment-model.php'); 
+require_once('../Controller/message-controller.php');
+if(isset($_COOKIE['Admin'])){}else if(isset($_COOKIE['Sales'])){}
+else{
+    message("You can't access this page");
+}
 $result=pendingpayment(); 
 ?>
 <!DOCTYPE html>

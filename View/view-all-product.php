@@ -1,4 +1,9 @@
 <?php require_once('../Model/product_model.php'); 
+require_once('../Controller/message-controller.php');
+if(isset($_COOKIE['Admin'])){}else if(isset($_COOKIE['Sales'])){}else if(isset($_COOKIE['Customer'])){}
+else{
+    message("You can't access this page");
+}
 $result=viewallproduct(); ?>
 <!DOCTYPE html>
 <html lang="en">

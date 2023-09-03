@@ -1,4 +1,5 @@
 <?php require_once('../Model/payment-model.php'); 
+require_once('../Controller/message-controller.php');
 if(!isset($_COOKIE['Customer'])){
     message("You can't access this page");
 }

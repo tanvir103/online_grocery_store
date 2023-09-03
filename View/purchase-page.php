@@ -1,6 +1,10 @@
 <?php
 require_once('../Model/product_model.php'); 
 require_once('../Model/userinfo_model.php');
+require_once('../Controller/message-controller.php');
+if(!isset($_COOKIE['Customer'])){
+    message("You can't access this page");
+}
 $id=$_GET['id'];
 $cid=$_COOKIE['Customer'];
 $user=viewprofileinfo($cid);
