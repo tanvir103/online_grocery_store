@@ -171,3 +171,72 @@ function productquantity(){
     checkadd()
 }
 
+function checkaddsales(){
+    let username = document.getElementById('username').value;
+    let phone = document.getElementById('phone').value;
+    let email = document.getElementById('email').value;
+    let password = document.getElementById('password').value;
+    let repassword = document.getElementById('repassword').value;
+
+    let usernameError = document.getElementById('nameerror').innerText;
+    let phoneError = document.getElementById('phoneerror').innerText;
+    let mailError = document.getElementById('emailerror').innerText;
+    let passwordError = document.getElementById('passworderror').innerText;
+    let repasswordError = document.getElementById('repassworderror').innerText;
+
+    let submitButton = document.getElementById('submit');
+
+    if (
+        username === '' ||
+        phone === '' ||
+        email === '' ||
+        password === '' ||
+        repassword === '' ||
+        usernameError !== '' ||
+        phoneError !== '' ||
+        mailError !== '' ||
+        passwordError !== '' ||
+        repasswordError !== '' ||
+        password !== repassword
+    ) {
+        submitButton.disabled = true;
+    } else {
+        submitButton.disabled = false;
+    }
+
+
+}
+function checksalesusername(){
+    let username=document.getElementById('username').value;
+    if(username.length<4){
+        document.getElementById('nameerror').innerHTML = "Name can't less than 4 character";  
+    }else {
+        document.getElementById('nameerror').innerHTML = "";
+    }
+    checkaddsales();
+}
+function checksalespassword(){
+    let password=document.getElementById('password').value;
+    let repassword=document.getElementById('repassword').value;
+    if(repassword!=password){
+        document.getElementById("repassworderror").innerHTML="Password Do not match";
+    }else{
+        document.getElementById("repassworderror").innerHTML="";
+    }
+    checkaddsales();
+}
+
+function checkEmail() {
+    let mail = document.getElementById('email').value;
+    let atPos = mail.indexOf('@');
+    let dotPos = mail.lastIndexOf('.');
+
+    if (!mail) {
+        document.getElementById('emailerror').innerHTML = "Email cannot be empty.";
+    } else if (atPos === -1 || atPos === 0 || dotPos === -1 || dotPos <= atPos + 1 || dotPos === mail.length - 1) {
+        document.getElementById('emailerror').innerHTML = "Invalid email address.";
+    } else {
+        document.getElementById('emailerror').innerHTML = "";
+    }
+    checkaddsales();
+}
