@@ -73,5 +73,17 @@ function viewprofileinfo($id){
     $result=mysqli_query($conn,$sql);
     return $result;
 }
+function uniqueEmail($email){
+    $conn=dbConnection();
+    $sql="select Email from userinfo where Email='$email' ";
+    $result = mysqli_query($conn, $sql);
+    $count = mysqli_num_rows($result);
+
+    if($count>0){
+        return "true";
+    }else{
+        return "false";
+    }
+}
 
 ?>
