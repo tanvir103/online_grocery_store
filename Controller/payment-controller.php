@@ -1,10 +1,11 @@
 <?php
 require_once('../Model/payment-model.php');
+require_once('../Controller/message-controller.php');
 $id=$_GET['id'];
 
 if(approvepayment($id)){
-    echo "Payment Approve Successfully";
+    message("Payment Approve Successfully");
 }else{
-    echo "Your can not approve payment";
+    message("Your can not approve payment");
 }
 ?>

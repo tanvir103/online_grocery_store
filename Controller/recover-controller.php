@@ -1,10 +1,11 @@
 <?php
 require_once('../Model/userinfo_model.php');
+require_once('../Controller/message-controller.php');
 $id=$_GET['id'];
 
 if(recoverUser($id)){
-    echo "User Recover Successfully";
+    message("User Recover Successfully");
 }else{
-    echo "Your can not recover user";
+    message("Your can not recover user");
 }
 ?>

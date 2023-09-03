@@ -1,6 +1,7 @@
 <?php
 require_once('../Model/payment-model.php'); 
-require_once('../Model/product_model.php'); 
+require_once('../Model/product_model.php');
+require_once('../Controller/message-controller.php'); 
 if(isset($_POST['submit'])){
     $quantity=$_POST['quantity'];
     $productid=$_POST['productid'];
@@ -12,10 +13,11 @@ if(isset($_POST['submit'])){
 
     $result=addcart($productid,$quantity);
     $result1=paymentadd($id,$productid,$totalprice,$purchaseDate);
+
     if($result && $result1){
-        echo "Purchase Confirm & Payment added for approval";
+        message("Purchase Confirm & Payment added for approval");
     }else{
-        echo "Failed";
+        message("Failed");
     }
 }
 ?>

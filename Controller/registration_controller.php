@@ -13,9 +13,9 @@ require_once('../Controller/message-controller.php');
             $result=addCustomer($username,$email,$phone,$password);
         }
         if($result){
-            echo "Account Created";
+            message("Customer Account Created");
         }else{
-            echo "Failed";
+            message("Failed");
         }
         
     }

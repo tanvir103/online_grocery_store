@@ -1,5 +1,6 @@
 <?php
 require_once('../Model/product_model.php');
+require_once('../Controller/message-controller.php');
 if(isset($_POST['submit'])){
     $productname=$_POST['name'];
     $category=$_POST['category'];
@@ -14,9 +15,9 @@ if(isset($_POST['submit'])){
     $result=insertProduct($productname,$category,$productprice,$productamount,$fileName);
 
     if($result){
-        echo "Product Added Successfully";
+        message("Product Added Successfully");
     }else{
-        echo "Add product operation failled";
+        message("Add product operation failled");
     }
 }
 ?>
