@@ -31,10 +31,10 @@ if(!isset($_COOKIE['Admin'])){
         <input type="text" name="phone" id="phone" size="40px" onkeyup="checksalesphone()"><br>
         <font face="times new roman" color="red" id="phoneerror"></font><br>
         <font face="times new roman">Password: </font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <input type="password" name="password" id="password" size="40px"><br>
+        <input type="password" name="password" id="password" size="40px" onkeyup="checksalespassword()"><br>
         <font face="times new roman" color="red" id="passworderror"></font><br>
         <font face="times new roman">Re-enter Password: </font>
-        <input type="password" name="repassword" id="repassword" size="40px" onkeyup="checksalespassword()"><br>
+        <input type="password" name="repassword" id="repassword" size="40px" onkeyup="checksalesrepassword()"><br>
         <font face="times new roman" color="red" id="repassworderror"></font><br>
         <button name="submit" id="submit">Add Sales Person</button>
     </td></tr>

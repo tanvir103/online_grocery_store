@@ -215,7 +215,7 @@ function checksalesusername(){
     }
     checkaddsales();
 }
-function checksalespassword(){
+function checksalesrepassword(){
     let password=document.getElementById('password').value;
     let repassword=document.getElementById('repassword').value;
     if(repassword!=password){
@@ -237,6 +237,24 @@ function checkEmail() {
         document.getElementById('emailerror').innerHTML = "Invalid email address.";
     } else {
         document.getElementById('emailerror').innerHTML = "";
+    }
+    checkaddsales();
+}
+function checksalesphone(){
+    let phone=document.getElementById('phone').value;
+    if(phone.length<11){
+        document.getElementById("phoneerror").innerHTML="Phone number should have 11 digit";
+    }else{
+        document.getElementById("phoneerror").innerHTML="";
+    }
+    checkaddsales();
+}
+function checksalespassword(){
+    let password=document.getElementById('password').value;
+    if(password.length<8){
+        document.getElementById("passworderror").innerHTML="Password should have more than 8 character";
+    }else{
+        document.getElementById("passworderror").innerHTML="";
     }
     checkaddsales();
 }
