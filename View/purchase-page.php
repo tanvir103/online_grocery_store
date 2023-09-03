@@ -51,10 +51,11 @@ $result=search($id);
         <font face="times new roman">Product Price :</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <input type="text" id="ProductPrice" value="<?php echo $productprice ?>"><br><br>
         <font face="times new roman">Purchase Quantity :</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <input type="number" id="quantity" name="quantity" onkeyup="getprice()"><br><br>
+        <input type="number" id="quantity" name="quantity" onkeyup="getprice(),checkquantity()"><br>
+        <font face="times new roman" color="red" id="quantityerror"></font><br>
         <font face="times new roman">Total Price :</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <font face="times new roman" id="totalprice"></font><br><br>
-        <button name="submit">Confirm Purchase</button>
+        <button name="submit" id="submit">Confirm Purchase</button>
     </td></tr>
     </form>
     </table>

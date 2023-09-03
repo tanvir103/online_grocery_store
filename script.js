@@ -258,3 +258,33 @@ function checksalespassword(){
     }
     checkaddsales();
 }
+
+function checkpurchase(){
+    let quantity = document.getElementById('quantity').value;
+
+    let quantityerror = document.getElementById('quantityerror').innerText;
+
+    let submitButton = document.getElementById('submit');
+
+    if (
+        quantity === '' ||
+        quantityerror !== '' 
+    ) {
+        submitButton.disabled = true;
+    } else {
+        submitButton.disabled = false;
+    }
+
+
+}
+
+
+function checkquantity(){
+    let password=document.getElementById('quantity').value;
+    if(password.length==0){
+        document.getElementById("quantityerror").innerHTML="Quantity should be added";
+    }else{
+        document.getElementById("quantityerror").innerHTML="";
+    }
+    checkpurchase();
+}
