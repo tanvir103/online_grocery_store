@@ -11,16 +11,14 @@ if(isset($_POST['submit'])){
     $totalprice=$quantity*$productprice;
     $purchaseDate = date("d-m-Y");
 
-    echo $productprice;
-    echo $quantity;
 
-    // $result=addcart($productid,$quantity);
-    // $result1=paymentadd($id,$productid,$totalprice,$purchaseDate);
+    $result=addcart($productid,$quantity);
+    $result1=paymentadd($id,$productid,$totalprice,$purchaseDate);
 
-    // if($result && $result1){
-    //     message("Purchase Confirm & Payment added for approval");
-    // }else{
-    //     message("Failed");
-    // }
+    if($result && $result1){
+        message("Purchase Confirm & Payment added for approval");
+    }else{
+        message("Failed");
+    }
 }
 ?>
