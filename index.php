@@ -1,3 +1,12 @@
+<?php
+if(isset($_COOKIE['Admin'])){
+    header('location:View/adminDashboard.php');
+}else if(isset($_COOKIE['Sales'])){
+    header('location:View/saleDashboard.php');
+}else if(isset($_COOKIE['Customer'])){
+    header('location:View/customerDashboard.php');
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
