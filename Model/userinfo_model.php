@@ -85,5 +85,13 @@ function uniqueEmail($email){
         return "false";
     }
 }
+function userName($id){
+    $conn=dbConnection();
+    $sql="SELECT Username FROM userinfo WHERE UserID='$id'";
+    $result = mysqli_query($conn, $sql);
+    $row=mysqli_fetch_assoc($result);
+    return $row;
+}
+
 
 ?>

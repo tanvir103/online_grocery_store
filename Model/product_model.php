@@ -35,13 +35,20 @@
         return $result;
     }
     
-    function productinfo($id){
+    function productprice($id){
         $conn=dbConnection();
         $sql="SELECT * FROM productinfo WHERE ProductID='$id'";
         $result=mysqli_query($conn,$sql);
         $row=mysqli_fetch_assoc($result);
         return $row;
     }
-
+    function productinfo($id){
+        $conn=dbConnection();
+        $sql="SELECT ProductName FROM productinfo WHERE ProductID='$id'";
+        $result=mysqli_query($conn,$sql);
+        $row=mysqli_fetch_assoc($result);
+        return $row;
+    }
+   
    
 ?>
