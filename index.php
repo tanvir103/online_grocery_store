@@ -37,6 +37,5 @@ if(isset($_COOKIE['Admin'])){
                 <a href="View/registration.html"><button>Create your account</button></a>
             </td></tr>
         </table>
-   
 </body>
 </html>
